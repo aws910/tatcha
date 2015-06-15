@@ -1,0 +1,42 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jquery -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+
+  <script src="js/application.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+<div class="container" ng-app="tatchaList">    
+  <div class="row" style="text-align:center; border-bottom:1px dashed #ccc;  padding:0 0 20px 0; margin-bottom:40px;">
+    <h3 style="font-family:arial; font-weight:bold; font-size:30px;">Tatcha gallery browsing example</h3>
+  </div>
+
+  <div ng-controller="tatchaController">        
+    <ul class="row">
+      <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" ng-repeat="product in productList">
+        <a href="#">
+          <img class="img-responsive" src="{{product.image_url}}">
+          {{product.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
